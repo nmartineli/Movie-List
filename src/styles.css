@@ -1,3 +1,11 @@
 a {
 	text-decoration: none;
 }
+
+.container-dark {
+	background-color: #555555;
+}
+
+.container-light {
+	background-color: #f1f1f1f1;
+}
