@@ -4,7 +4,6 @@ const WatchListContext = createContext();
 
 export function WatchListProvider({ children }) {
 	const watchList = [];
-
 	return <WatchListContext.Provider value={{ watchList }}>{children}</WatchListContext.Provider>;
 }
 
