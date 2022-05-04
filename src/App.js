@@ -29,8 +29,8 @@ function App() {
 				<Container fluid style={{ marginTop: '15px' }}>
 					<Row>
 						{movies.map((movie) => (
-							<Col>
-								<MovieCard key={movie.id} movie={movie} />
+							<Col key={movie.id}>
+								<MovieCard movie={movie} />
 							</Col>
 						))}
 					</Row>

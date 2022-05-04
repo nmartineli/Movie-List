@@ -1,7 +1,9 @@
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import ListButton from '../ListButton';
 
 export default function MovieCard(props) {
 	const { movie } = props;
+
 	return (
 		<Card style={{ width: '15rem', height: '42rem', marginBottom: '15px' }}>
 			<Card.Header as="h5" className="text-center">
@@ -18,9 +20,7 @@ export default function MovieCard(props) {
 					{movie.imDbRating}
 				</Card.Subtitle>
 				<Card.Text>Equipe: {movie.crew}</Card.Text>
-				<Button variant="secondary" className="align-bottom">
-					Adicionar à lista
-				</Button>
+				<ListButton movie={movie} />
 			</Card.Body>
 		</Card>
 	);
