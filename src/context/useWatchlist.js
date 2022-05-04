@@ -1,11 +1,11 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
 
 const WatchListContext = createContext();
 
 export function WatchListProvider({ children }) {
-	const [watchList, setWatchList] = useState([]);
+	const watchList = [];
 
-	return <WatchListContext.Provider value={{ watchList, setWatchList }}>{children}</WatchListContext.Provider>;
+	return <WatchListContext.Provider value={{ watchList }}>{children}</WatchListContext.Provider>;
 }
 
 export function useWatchList() {

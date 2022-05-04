@@ -17,9 +17,9 @@ export default function MovieCard(props) {
 					<img src="./logo-imdb.png" style={{ width: '29px', marginRight: '5px' }} />
 					{movie.imDbRating}
 				</Card.Subtitle>
-				<Card.Text>Crew: {movie.crew}</Card.Text>
+				<Card.Text>Equipe: {movie.crew}</Card.Text>
 				<Button variant="secondary" className="align-bottom">
-					Add to your watchlist
+					Adicionar à lista
 				</Button>
 			</Card.Body>
 		</Card>

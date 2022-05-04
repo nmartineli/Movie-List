@@ -4,7 +4,7 @@ import { getMovies } from './redux/ducks/movies';
 
 import Header from './components/Header';
 import MovieCard from './components/MovieCard/Index';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
 
 function App() {
 	const dispatch = useDispatch();
@@ -15,13 +15,18 @@ function App() {
 
 	const movies = useSelector((state) => state.movies.movies);
 
-	console.log(movies);
-
 	return (
 		<div>
 			<Header />
 			<div className="container">
-				<Container fluid style={{ marginTop: '30px' }}>
+				<Alert variant="light" style={{ marginTop: '15px' }}>
+					<Alert.Heading>O que vamos assitir hoje?</Alert.Heading>
+					<p>
+						Sem ideia do que assistir? Esta é a lista dos 250 melhores filmes de acordo com os usuários da maior base de dados de
+						filmes, a IMDB. Escolha os seus favoritos e monte a sua lista!
+					</p>
+				</Alert>
+				<Container fluid style={{ marginTop: '15px' }}>
 					<Row>
 						{movies.map((movie) => (
 							<Col>

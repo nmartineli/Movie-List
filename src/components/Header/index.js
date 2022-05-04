@@ -4,10 +4,10 @@ export default function Header() {
 	return (
 		<Navbar bg="light" expand="lg">
 			<Container>
-				<Navbar.Brand href="#home">Movie Watchlist</Navbar.Brand>
+				<Navbar.Brand href="#home">O que vamos assistir hoje?</Navbar.Brand>
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
-					<Button>Check your watchlist</Button>
+					<Button>Confira a sua lista</Button>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
