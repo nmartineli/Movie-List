@@ -9,9 +9,9 @@ export default function MovieCard(props) {
 
 	return (
 		<Card
+			style={{ width: '15rem', height: '40rem', marginBottom: '15px' }}
 			bg={darkMode ? 'dark' : 'light'}
 			text={darkMode ? 'white' : 'dark'}
-			style={{ width: '15rem', height: '42rem', marginBottom: '15px' }}
 		>
 			<Card.Header as="h5" className="text-center">
 				# {movie.rank}
@@ -27,7 +27,6 @@ export default function MovieCard(props) {
 					{movie.imDbRating}
 				</Card.Subtitle>
 				<Card.Text>Equipe: {movie.crew}</Card.Text>
-				<ListButton movie={movie} />
 			</Card.Body>
 		</Card>
 	);

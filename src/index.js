@@ -9,18 +9,20 @@ import App from './App';
 import Watchlist from './pages/Watchlist';
 import store from './redux/configureStore';
 
-import './styles.css';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<BrowserRouter>
-				<Routes>
-					<Route path="/" element={<App />} />
-					<Route path="/watchlist" element={<Watchlist />} />
-				</Routes>
-			</BrowserRouter>
+			<DarkModeProvider>
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<App />} />
+						<Route path="/watchlist" element={<Watchlist />} />
+					</Routes>
+				</BrowserRouter>
+			</DarkModeProvider>
 		</Provider>
 	</React.StrictMode>
 );
