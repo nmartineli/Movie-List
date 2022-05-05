@@ -14,7 +14,7 @@ const initialState = {
 	movies: [],
 };
 
-export default (state = initialState, action) => {
+export default function moviesReducer(state = initialState, action) {
 	switch (action.type) {
 		case SET_MOVIES:
 			const { movies } = action;
@@ -22,4 +22,4 @@ export default (state = initialState, action) => {
 		default:
 			return state;
 	}
-};
+}

@@ -19,7 +19,7 @@ const initialState = {
 	movieList: [],
 };
 
-export default (state = initialState, action) => {
+export default function movieListReducer(state = initialState, action) {
 	switch (action.type) {
 		case ADD_TO_LIST:
 			const { addedMovie } = action;
@@ -32,4 +32,4 @@ export default (state = initialState, action) => {
 		default:
 			return state;
 	}
-};
+}

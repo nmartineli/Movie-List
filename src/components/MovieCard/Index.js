@@ -23,7 +23,7 @@ export default function MovieCard(props) {
 					{movie.year}
 				</Card.Subtitle>
 				<Card.Subtitle className="mb-2 text-muted" as="h6">
-					<img src="./logo-imdb.png" style={{ width: '29px', marginRight: '5px' }} />
+					<img src="./logo-imdb.png" style={{ width: '29px', marginRight: '5px' }} alt="Internet Movie Database logo" />
 					{movie.imDbRating}
 				</Card.Subtitle>
 				<Card.Text>Equipe: {movie.crew}</Card.Text>
