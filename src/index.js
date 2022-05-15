@@ -8,21 +8,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Watchlist from './pages/Watchlist';
 import store from './redux/configureStore';
-
-import { DarkModeProvider } from './context/DarkModeContext';
+import Theme from './Theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<DarkModeProvider>
+			<Theme>
 				<BrowserRouter>
 					<Routes>
 						<Route path="/" element={<App />} />
 						<Route path="/watchlist" element={<Watchlist />} />
 					</Routes>
 				</BrowserRouter>
-			</DarkModeProvider>
+			</Theme>
 		</Provider>
 	</React.StrictMode>
 );

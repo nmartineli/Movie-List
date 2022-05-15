@@ -1,17 +1,10 @@
-import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
-import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function MovieCard(props) {
 	const { movie } = props;
-	const { darkMode } = useContext(DarkModeContext);
 
 	return (
-		<Card
-			style={{ width: '15rem', height: '40rem', marginBottom: '15px' }}
-			bg={darkMode ? 'dark' : 'light'}
-			text={darkMode ? 'white' : 'dark'}
-		>
+		<Card style={{ width: '15rem', height: '40rem', marginBottom: '15px' }}>
 			<Card.Header as="h5" className="text-center">
 				# {movie.rank}
 			</Card.Header>
