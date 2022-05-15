@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Watchlist from './pages/Watchlist';
 import store from './redux/configureStore';
-import Theme from './Theme';
+import Theme from './styles/Theme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

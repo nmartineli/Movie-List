@@ -1,6 +1,21 @@
 import { Card } from 'react-bootstrap';
 import ListButton from '../ListButton';
 
+import styled from 'styled-components';
+
+const CardContainer = styled.div`
+width: 15rem;
+height: 42rem;
+margin-bottom: 1rem
+border: none
+`;
+
+const MovieTitle = styled.h2``;
+
+const MoiveInfos = styled.h3``;
+
+const MoiveRating = styled.h4``;
+
 export default function MovieCard(props) {
 	const { movie } = props;
 
