@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Alert, Col, Container, Row } from 'react-bootstrap';
 import ScrollToTop from 'react-scroll-to-top';
