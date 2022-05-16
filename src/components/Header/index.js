@@ -1,5 +1,9 @@
 import { Navbar, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const HeaderContainer = styled.div``;
+const HeaderLogo = styled.div``;
 
 export default function Header() {
 	return (
