@@ -1,42 +1,64 @@
-import { Card } from 'react-bootstrap';
 import ListButton from '../ListButton';
 
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
-width: 15rem;
-height: 42rem;
-margin-bottom: 1rem
-border: none
+	width: 12rem;
+	height: 32rem;
+	margin-bottom: 3rem;
+	border: none;
 `;
 
-const MovieTitle = styled.h2``;
+const MovieTitle = styled.h2`
+	font-weight: 700;
+	font-size: ${(props) => props.theme.fontSize.xl};
+	color: ${(props) => props.theme.colors.grey900};
+	margin: 0;
+`;
 
-const MoiveInfos = styled.h3``;
+const MovieYear = styled.h3`
+	font-weight: 700;
+	font-size: ${(props) => props.theme.fontSize.sm};
+	margin: 8px 0;
+	color: ${(props) => props.theme.colors.grey400};
+`;
 
-const MoiveRating = styled.h4``;
+const MovieRatingContainer = styled.div`
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+`;
+
+const MovieRating = styled.h4`
+	font-size: ${(props) => props.theme.fontSize.sm};
+	color: ${(props) => props.theme.colors.grey900};
+	margin: 0;
+`;
+
+const MovieCrew = styled.h3`
+	font-size: ${(props) => props.theme.fontSize.base};
+	margin: 8px 0;
+	color: ${(props) => props.theme.colors.grey500};
+`;
 
 export default function MovieCard(props) {
 	const { movie } = props;
 
 	return (
-		<Card style={{ width: '15rem', height: '42rem', marginBottom: '15px' }}>
-			<Card.Header as="h5" className="text-center">
-				# {movie.rank}
-			</Card.Header>
-			<Card.Img variant="top" src={movie.image} />
-			<Card.Body>
-				<Card.Title>{movie.title}</Card.Title>
-				<Card.Subtitle className="mb-2 text-muted" as="h5">
-					{movie.year}
-				</Card.Subtitle>
-				<Card.Subtitle className="mb-2 text-muted" as="h6">
-					<img src="./logo-imdb.png" style={{ width: '29px', marginRight: '5px' }} alt="Internet Movie Database logo" />
-					{movie.imDbRating}
-				</Card.Subtitle>
-				<Card.Text>Equipe: {movie.crew}</Card.Text>
-				<ListButton movie={movie} />
-			</Card.Body>
-		</Card>
+		<CardContainer>
+			<img src={movie.image} style={{ width: '100%' }} alt={movie.title} />
+			<MovieYear>{movie.year}</MovieYear>
+			<MovieTitle>{movie.title}</MovieTitle>
+			<MovieRatingContainer>
+				<img
+					src="./logo-imdb.png"
+					style={{ width: '25px', height: '100%', marginRight: '5px' }}
+					alt="Internet Movie Database logo"
+				/>
+				<MovieRating> {movie.imDbRating} </MovieRating>
+			</MovieRatingContainer>
+			<MovieCrew>Equipe: {movie.crew}</MovieCrew>
+			<ListButton movie={movie} />
+		</CardContainer>
 	);
 }
