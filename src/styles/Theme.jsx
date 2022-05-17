@@ -6,6 +6,7 @@ const theme = {
 		grey400: '#9CA3AF',
 		grey500: '#6B7280',
 		grey900: '#111827',
+		white: '#FFFFFF',
 	},
 	fonts: [],
 	fontSize: {
