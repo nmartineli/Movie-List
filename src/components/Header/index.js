@@ -1,6 +1,6 @@
-import { Navbar, Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ListButton } from '../../Buttons';
 
 const HeaderBar = styled.div`
 	height: 80px;
@@ -33,7 +33,7 @@ export default function Header() {
 					</Link>
 				</HeaderLogo>
 				<Link to="/watchlist">
-					<Button>Confira a sua lista</Button>
+					<ListButton> Confira a sua lista</ListButton>
 				</Link>
 			</HeaderContainer>
 		</HeaderBar>
